@@ -65,7 +65,7 @@ public class ContactServiceJPATest {
     
     @Autowired 
     private ContactService contactService;
-    
+   
     @Before
     public void cleanTestData() throws Exception {
         try (Connection conn = dataSource.getConnection()) {
@@ -75,7 +75,7 @@ public class ContactServiceJPATest {
             ps.executeUpdate();
         }
     }
-    
+    // changes dans cette methode pour faire passer les tests
     @Test
     public void testFindAllContact() {
         List<Contact> users = contactService.findAll(1, 20);
